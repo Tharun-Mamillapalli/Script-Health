@@ -19,11 +19,11 @@ Before running the application, make sure you have the following prerequisites i
 # Configuration
 * Open the .env file in the project root directory.
 * Provide your MySQL database connection details:
-  ```DB_HOST=localhost
-DB_USER=your_database_user
-DB_PASSWORD=your_database_password
-DB_NAME=your_database_name
-```
+  ```DB_HOST=localhost```
+```DB_USER=your_database_user```
+```DB_PASSWORD=your_database_password```
+```DB_NAME=your_database_name```
+
 * Provide your Gmail account details for sending confirmation emails:
 ```EMAIL_USER=your_email@gmail.com
 EMAIL_PASSWORD=your_email_password
