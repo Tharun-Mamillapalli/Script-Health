@@ -1,5 +1,11 @@
 # ScriptChain-Health
 
+<img width="1792" alt="Screenshot 2023-06-17 at 12 17 21" src="https://github.com/Tharun-Mamillapalli/Script-Health/assets/51873236/bd4ed867-2db8-4cdd-9319-374bc0166511">
+
+<img width="731" alt="Screenshot 2023-06-17 at 12 17 30" src="https://github.com/Tharun-Mamillapalli/Script-Health/assets/51873236/fe6dc03e-e04c-46ec-9583-6cfce7c44949">
+
+
+
 * This webpage allows users to register their email address and receive a confirmation email containing their name.
 * The registration process is handled by a server-side application built with Node.js and MySQL, along with Nodemailer for sending emails.
 
