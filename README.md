@@ -27,9 +27,10 @@ DB_NAME=your_database_name```
 
 
 * Provide your Gmail account details for sending confirmation emails:
+
 ```EMAIL_USER=your_email@gmail.com
-EMAIL_PASSWORD=your_email_password
-```
+EMAIL_PASSWORD=your_email_password```
+
 
 # Database Setup
 * Create a new database in your MySQL server with the name specified in the .env file.
