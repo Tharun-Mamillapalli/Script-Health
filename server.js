@@ -6,9 +6,9 @@ const nodemailer = require("nodemailer");
 // Create a connection
 const connection = mysql.createConnection({
   host: "localhost",
-  user: "tan",
-  password: "password",
-  database: "tharun",
+  user: "your user_name",// please enter user name
+  password: "password",// please enter password
+  database: "db",// please enter the database which you have created on the workbench table
 });
 
 // Connect to the MySQL database
@@ -53,15 +53,15 @@ function sendConfirmationEmail(email, name) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "tm2437@nau.edu",
-      pass: "@Tharuntan6969",
+      user: "email",
+      pass: "password",
     },
   });
 
   // Email content
   const mailOptions = {
-    from: "tm2437@nau.edu",
-    to: "nopedo3183@aaorsi.com",
+    from: "email",// please enter your email 
+    to: "Confirmation Email",// please enter the email to which you are sending conformation email
     subject: "Confirmation Email",
     text: `Dear ${name},\n\nThank you for registering. Your email (${email}) has been confirmed.`,
   };
