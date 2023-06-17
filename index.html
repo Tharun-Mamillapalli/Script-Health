@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <title>User Registration</title>
+  </head>
+  <body ng-controller="UserController">
+    <h1>User Registration</h1>
+    <form ng-submit="registerUser()">
+      <label>Name:</label>
+      <input type="name" ng-model="name" required /><br /><br />
+      <label>Email:</label>
+      <input type="email" ng-model="email" required /><br /><br />
+      <label>Password:</label>
+      <input type="password" ng-model="password" required /><br /><br />
+      <input type="submit" value="Register" />
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+
+    <script>
+      angular.module("myApp", []).controller("UserController", [
+        "$scope",
+        "$http",
+        function ($scope, $http) {
+          $scope.registerUser = function () {
+            const userData = {
+              email: $scope.email,
+              password: $scope.password,
+              name: $scope.name,
+            };
+
+            // Make POST request to the server API
+            $http
+              .post("/users", userData)
+              .then(function (response) {
+                alert("User registered successfully!");
+                ($scope.email = ""), // Clear the input fields
+                  ($scope.password = ""),
+                  ($scope.name = "");
+              })
+              .catch(function (error) {
+                console.error("Error registering user:", error);
+                alert("Failed to register user. Please try again.");
+              });
+          };
+        },
+      ]);
+    </script>
+  </body>
+</html>
