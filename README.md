@@ -15,3 +15,27 @@ Before running the application, make sure you have the following prerequisites i
 * Navigate to the project directory in your terminal.
 * Install the dependencies by running the following command:
 ```npm install```
+
+# Configuration
+* Open the .env file in the project root directory.
+* Provide your MySQL database connection details:
+  ```DB_HOST=localhost
+DB_USER=your_database_user
+DB_PASSWORD=your_database_password
+DB_NAME=your_database_name
+```
+* Provide your Gmail account details for sending confirmation emails:
+```EMAIL_USER=your_email@gmail.com
+EMAIL_PASSWORD=your_email_password
+```
+
+# Database Setup
+* Create a new database in your MySQL server with the name specified in the .env file.
+* Import the database.sql file located in the project root directory to set up the necessary table.
+
+# Usage
+
+* Start the application by running the following command:
+  ```node server.js```
+  or
+  ```npm start```
